@@ -14,7 +14,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-maven:
+  build_maven:
+    name: Build Maven
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -36,7 +37,9 @@ jobs:
         name: kbe-u1-build
         path: target/*.jar
 
-  build-docker-image:
+  build_docker_image:
+    name: Build Docker Image
+    needs: build_maven
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
