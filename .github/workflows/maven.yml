@@ -60,4 +60,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tag: ${{ github.repository }}:latest
+          tags: ${{ github.repository }}:latest
